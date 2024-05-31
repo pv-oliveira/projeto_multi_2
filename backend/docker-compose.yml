@@ -33,7 +33,6 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_DB=postgres
-      - DB_URL=mongodb+srv://Paulo:tMyALt1LiQkCtuPA@cluster0.bejkqja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
   app1:
     container_name: app1
     build: ./app1
@@ -48,6 +47,7 @@ services:
       - KAFKA_TOPIC=topic1
       - SENDER_EMAIL=paulo.victor.ig2@gmail.com
       - SENDER_PASS=okuv samh nelm tanu
+      - DB_URL=mongodb+srv://Paulo:tMyALt1LiQkCtuPA@cluster0.bejkqja.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
     depends_on:
       - kafka
       - postgres
