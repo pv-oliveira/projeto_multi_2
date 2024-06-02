@@ -6,9 +6,6 @@ async function senderInit() {
     const senderEmail = process.env.SENDER_EMAIL
     const senderPass = process.env.SENDER_PASS
 
-    console.log("senderEmail", senderEmail)
-    console.log("senderPass", senderPass)
-
     const sender = nodemailer.createTransport({
       host: "smtp.gmail.com",
       port: 465,
